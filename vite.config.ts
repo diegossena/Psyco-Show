@@ -17,6 +17,6 @@ export default defineConfig({
   resolve: { alias },
   publicDir: development ? 'public' : false,
   build: {
-    outDir: path.resolve('..', 'docs')
+    outDir: path.resolve('.', 'docs')
   }
 })
