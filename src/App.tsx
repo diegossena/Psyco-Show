@@ -3,7 +3,7 @@ import * as S from './styles.js'
 import questions from './questions.json'
 
 function questions_shuffle() {
-  return questions.sort(() => Math.random() > .5 ? 1 : -1)
+  return [...questions].sort(() => Math.random() > .5 ? 1 : -1)
 }
 export type TOption = 'A' | 'B' | 'C' | 'D' | 'E'
 export type TStatus = 'correct' | 'incorrect' | 'select'
@@ -11,7 +11,7 @@ const options: TOption[] = ['A', 'B', 'C', 'D', 'E'] as const
 
 function App() {
   // states
-  const [questions, setQuestions] = React.useState(questions_shuffle)
+  const [questions, setQuestions] = React.useState(questions_shuffle())
   const [index, setIndex] = React.useState(0)
   const [selected, setSelected] = React.useState<TOption>()
   const [status, setStatus] = React.useState<TStatus>('select')
