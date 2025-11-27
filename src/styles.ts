@@ -24,6 +24,14 @@ export const HeaderWrapper = styled.div`
   border-radius: 10px;
   max-width: 400px;
   box-shadow: rgba(16, 24, 40, 0.05) 0px 1px 2px 0px;
+  position: relative;
+  overflow: hidden;
+`
+export const HeaderProgress = styled.div`
+  position: absolute;
+  left: 0;
+  height: 100%;
+  background-color: rgba(0, 255, 0 , 0.25);
 `
 interface FooterProps {
   'data-status': TStatus
@@ -62,7 +70,10 @@ export const FooterResult = styled.div`
   justify-content: center;
   width: 100%;
 `
-export const FooterButton = styled.button`
+interface FooterButtonProps {
+  'data-status': TStatus
+}
+export const FooterButton = styled.button<FooterButtonProps>`
   cursor: pointer;
   display: flex;
   justify-content: center;
