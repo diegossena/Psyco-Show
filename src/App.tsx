@@ -106,7 +106,7 @@ function App() {
       ) : (
         <>
           <S.Section>
-            <S.Question>Parabéns! Continua se esforçando.</S.Question>
+            <S.Question>Parabéns! Continue se esforçando.</S.Question>
           </S.Section>
           <S.Footer data-status="correct">
             <S.FooterButton data-status="correct" onClick={reload}>
