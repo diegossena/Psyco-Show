@@ -16,6 +16,7 @@ export default defineConfig({
   plugins: [react()],
   resolve: { alias },
   publicDir: development ? 'public' : false,
+  base: development ? undefined : '/Psyco-Show/',
   build: {
     outDir: path.resolve('.', 'docs')
   }
